@@ -1,8 +1,6 @@
 FROM python:3.6-alpine
 
-ARG CURATOR_VERSION
-
-RUN pip install  elasticsearch-curator==${CURATOR_VERSION} &&\
+RUN pip install  elasticsearch-curator==5.8.1 &&\
     rm -rf /var/cache/apk/*
 
 COPY ./config/ /config
